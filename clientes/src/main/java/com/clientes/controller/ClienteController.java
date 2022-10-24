@@ -7,12 +7,9 @@ import com.clientes.models.MovimientosModel;
 import com.clientes.models.PersonaCliente;
 import com.clientes.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.Date;
-import java.time.LocalDate;
 import java.util.List;
 
 @RestController

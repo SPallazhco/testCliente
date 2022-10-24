@@ -31,8 +31,6 @@ public class MovimientosService {
 
     public MovimientosModel generarMovimientos(MovimientosModel movimientosModel) {
 
-//        List<Movimientos> movimientosIdCuenta = movimientosDao.getMovimientos(Integer.valueOf(movimientosModel.getTblMovimientos().getIdCuenta()));
-//        log.info(movimientosIdCuenta.get(1).getTipoMovimiento());
         saldoActual = movimientosDao.getSaldoActual(Integer.valueOf(movimientosModel.getTblMovimientos().getIdCuenta()));
         if(saldoActual == null) {
             saldoActual = cuentaDao.getSaldoInicial(Integer.valueOf(movimientosModel.getTblMovimientos().getIdCuenta())).getSaldoInicial();
