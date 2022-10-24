@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "cf893941-ef64-4e91-93f4-395bf483c3ad",
+		"name": "TestClientes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9152278"
+	},
+	"item": [
+		{
+			"name": "obtenerClientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cliente/getCliente/0105480198",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"getCliente",
+						"0105480198"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reporte",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cliente/getMovimientosFechas/2020-03-20/2020-03-26",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"getMovimientosFechas",
+						"2020-03-20",
+						"2020-03-26"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crearcliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tbl\": {\n        \"contraseña\": \"123\",\n        \"estado\": 0,\n        \"idpersona\": \"0105480206\",\n        \"nombre\": \"WILLIAM\",\n        \"genero\": \"MASCULINO\",\n        \"edad\": \"30\",\n        \"direccion\": \"GUARUMALES\",\n        \"telefono\": \"0993361490\"\n    },\n    \"codigoRespuesta\": \"\",\n    \"mensajeUsuario\": \"hla\",\n    \"mensajeTecnico\": \"hla\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cliente/crearCliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"crearCliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CrearCuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tblCuenta\": {\n        \"tipoCuenta\": \"AHO\",\n        \"saldoInicial\": 10,\n        \"estado\": 0,\n        \"idCliente\": \"1\"\n    },\n    \"codigoRespuesta\": \"\",\n    \"mensajeUsuario\": \"\",\n    \"mensajeTecnico\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cliente/crearCuenta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"crearCuenta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movimientos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarCliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cliente/eliminarCliente/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"eliminarCliente",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarCuenta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cliente/eliminarCuenta/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"eliminarCuenta",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarMovimiento",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cliente/eliminarMovimiento/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"eliminarMovimiento",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
